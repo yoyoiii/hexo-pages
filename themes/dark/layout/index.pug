@@ -1,0 +1,9 @@
+main
+    include ./index_intro.pug
+    include ./index_main.pug
+
+script(src='./js/index.js')
+
+if config.intro_page.background
+    script(src='./js/background.js')
+
