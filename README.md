@@ -1,2 +1,2 @@
 # hexo-pages
-a homepage using hexo
+Powered by Hexo and based on Minima theme.
