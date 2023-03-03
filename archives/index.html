@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>All Posts - </title>
+  
+  <link rel="canonical" href="http://example.com/archives/">
+  
+  <meta name="description" content="">
+  
+  
+  <meta name="author" content="">
+  
+  
+  <meta property="og:image" content="http://example.com/images/thumbnail.jpg">
+  
+  
+  <meta property="og:site_name" content="Hexo" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="All Posts - " />
+  
+  <meta property="og:description" content="">
+  
+  <meta property="og:url" content="http://example.com/archives/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All Posts - ">
+  
+  <meta name="twitter:description" content="">
+  
+  
+  
+  <meta name="twitter:image" content="http://example.com/images/thumbnail.jpg">
+  
+  
+  <meta name="twitter:url" content="http://example.com/archives/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- 默认主题 -->
+<style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+  .page-title {
+    color: #0FA0CE;
+  }
+
+  /* hexo-douban */
+  .hexo-douban-tabs .hexo-douban-tab {
+    transition: none;
+    background-image: none !important;
+  }
+  .hexo-douban-tabs .hexo-douban-tab:hover {
+    background-position: inherit;
+    color: inherit;
+  }
+  .hexo-douban-tabs .hexo-douban-active {
+    background-image: none;
+    background: #0FA0CE;
+  }
+</style>
+
+<!-- 选择主题 -->
+<style>
+   
+      
+          body[theme="A35C8F"] a:not(.icon) {
+            text-decoration-color: #A35C8F;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 50%,
+              #A35C8F 50%
+            );
+          }
+          body[theme="A35C8F"] blockquote {
+            border-left: 8px solid #A35C8F;
+          }
+          body[theme="A35C8F"] .nanobar .bar {
+            background: #A35C8F;
+          }
+          body[theme="A35C8F"] .button.button-primary:hover,
+          body[theme="A35C8F"] button.button-primary:hover,
+          body[theme="A35C8F"] input[type="submit"].button-primary:hover,
+          body[theme="A35C8F"] input[type="reset"].button-primary:hover,
+          body[theme="A35C8F"] input[type="button"].button-primary:hover,
+          body[theme="A35C8F"] .button.button-primary:focus,
+          body[theme="A35C8F"] button.button-primary:focus,
+          body[theme="A35C8F"] input[type="submit"].button-primary:focus,
+          body[theme="A35C8F"] input[type="reset"].button-primary:focus,
+          body[theme="A35C8F"] input[type="button"].button-primary:focus {
+            background-color: #A35C8F;
+            border-color: #A35C8F;
+          }
+          body[theme="A35C8F"] input[type="email"]:focus,
+          body[theme="A35C8F"] input[type="number"]:focus,
+          body[theme="A35C8F"] input[type="search"]:focus,
+          body[theme="A35C8F"] input[type="text"]:focus,
+          body[theme="A35C8F"] input[type="tel"]:focus,
+          body[theme="A35C8F"] input[type="url"]:focus,
+          body[theme="A35C8F"] input[type="password"]:focus,
+          body[theme="A35C8F"] textarea:focus,
+          body[theme="A35C8F"] select:focus {
+            border: 1px solid #A35C8F;
+          }
+          body[theme="A35C8F"] .page-title {
+            color: #A35C8F;
+          }
+
+          body[theme="A35C8F"] .hexo-douban-tabs .hexo-douban-tab {
+            transition: none;
+          }
+          body[theme="A35C8F"] .hexo-douban-tabs .hexo-douban-tab:hover {
+            background-position: inherit;
+            color: inherit;
+          }
+          body[theme="A35C8F"] .hexo-douban-tabs .hexo-douban-active {
+            background-image: none;
+            background: #A35C8F;
+          }
+
+          .hexo-douban-tabs .hexo-douban-active {
+            background: #A35C8F;
+          }
+    
+      
+          body[theme="22A2C3"] a:not(.icon) {
+            text-decoration-color: #22A2C3;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 50%,
+              #22A2C3 50%
+            );
+          }
+          body[theme="22A2C3"] blockquote {
+            border-left: 8px solid #22A2C3;
+          }
+          body[theme="22A2C3"] .nanobar .bar {
+            background: #22A2C3;
+          }
+          body[theme="22A2C3"] .button.button-primary:hover,
+          body[theme="22A2C3"] button.button-primary:hover,
+          body[theme="22A2C3"] input[type="submit"].button-primary:hover,
+          body[theme="22A2C3"] input[type="reset"].button-primary:hover,
+          body[theme="22A2C3"] input[type="button"].button-primary:hover,
+          body[theme="22A2C3"] .button.button-primary:focus,
+          body[theme="22A2C3"] button.button-primary:focus,
+          body[theme="22A2C3"] input[type="submit"].button-primary:focus,
+          body[theme="22A2C3"] input[type="reset"].button-primary:focus,
+          body[theme="22A2C3"] input[type="button"].button-primary:focus {
+            background-color: #22A2C3;
+            border-color: #22A2C3;
+          }
+          body[theme="22A2C3"] input[type="email"]:focus,
+          body[theme="22A2C3"] input[type="number"]:focus,
+          body[theme="22A2C3"] input[type="search"]:focus,
+          body[theme="22A2C3"] input[type="text"]:focus,
+          body[theme="22A2C3"] input[type="tel"]:focus,
+          body[theme="22A2C3"] input[type="url"]:focus,
+          body[theme="22A2C3"] input[type="password"]:focus,
+          body[theme="22A2C3"] textarea:focus,
+          body[theme="22A2C3"] select:focus {
+            border: 1px solid #22A2C3;
+          }
+          body[theme="22A2C3"] .page-title {
+            color: #22A2C3;
+          }
+
+          body[theme="22A2C3"] .hexo-douban-tabs .hexo-douban-tab {
+            transition: none;
+          }
+          body[theme="22A2C3"] .hexo-douban-tabs .hexo-douban-tab:hover {
+            background-position: inherit;
+            color: inherit;
+          }
+          body[theme="22A2C3"] .hexo-douban-tabs .hexo-douban-active {
+            background-image: none;
+            background: #22A2C3;
+          }
+
+          .hexo-douban-tabs .hexo-douban-active {
+            background: #22A2C3;
+          }
+    
+      
+          body[theme="E68C12"] a:not(.icon) {
+            text-decoration-color: #E68C12;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 50%,
+              #E68C12 50%
+            );
+          }
+          body[theme="E68C12"] blockquote {
+            border-left: 8px solid #E68C12;
+          }
+          body[theme="E68C12"] .nanobar .bar {
+            background: #E68C12;
+          }
+          body[theme="E68C12"] .button.button-primary:hover,
+          body[theme="E68C12"] button.button-primary:hover,
+          body[theme="E68C12"] input[type="submit"].button-primary:hover,
+          body[theme="E68C12"] input[type="reset"].button-primary:hover,
+          body[theme="E68C12"] input[type="button"].button-primary:hover,
+          body[theme="E68C12"] .button.button-primary:focus,
+          body[theme="E68C12"] button.button-primary:focus,
+          body[theme="E68C12"] input[type="submit"].button-primary:focus,
+          body[theme="E68C12"] input[type="reset"].button-primary:focus,
+          body[theme="E68C12"] input[type="button"].button-primary:focus {
+            background-color: #E68C12;
+            border-color: #E68C12;
+          }
+          body[theme="E68C12"] input[type="email"]:focus,
+          body[theme="E68C12"] input[type="number"]:focus,
+          body[theme="E68C12"] input[type="search"]:focus,
+          body[theme="E68C12"] input[type="text"]:focus,
+          body[theme="E68C12"] input[type="tel"]:focus,
+          body[theme="E68C12"] input[type="url"]:focus,
+          body[theme="E68C12"] input[type="password"]:focus,
+          body[theme="E68C12"] textarea:focus,
+          body[theme="E68C12"] select:focus {
+            border: 1px solid #E68C12;
+          }
+          body[theme="E68C12"] .page-title {
+            color: #E68C12;
+          }
+
+          body[theme="E68C12"] .hexo-douban-tabs .hexo-douban-tab {
+            transition: none;
+          }
+          body[theme="E68C12"] .hexo-douban-tabs .hexo-douban-tab:hover {
+            background-position: inherit;
+            color: inherit;
+          }
+          body[theme="E68C12"] .hexo-douban-tabs .hexo-douban-active {
+            background-image: none;
+            background: #E68C12;
+          }
+
+          .hexo-douban-tabs .hexo-douban-active {
+            background: #E68C12;
+          }
+    
+      
+          body[theme="A6D40D"] a:not(.icon) {
+            text-decoration-color: #A6D40D;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 50%,
+              #A6D40D 50%
+            );
+          }
+          body[theme="A6D40D"] blockquote {
+            border-left: 8px solid #A6D40D;
+          }
+          body[theme="A6D40D"] .nanobar .bar {
+            background: #A6D40D;
+          }
+          body[theme="A6D40D"] .button.button-primary:hover,
+          body[theme="A6D40D"] button.button-primary:hover,
+          body[theme="A6D40D"] input[type="submit"].button-primary:hover,
+          body[theme="A6D40D"] input[type="reset"].button-primary:hover,
+          body[theme="A6D40D"] input[type="button"].button-primary:hover,
+          body[theme="A6D40D"] .button.button-primary:focus,
+          body[theme="A6D40D"] button.button-primary:focus,
+          body[theme="A6D40D"] input[type="submit"].button-primary:focus,
+          body[theme="A6D40D"] input[type="reset"].button-primary:focus,
+          body[theme="A6D40D"] input[type="button"].button-primary:focus {
+            background-color: #A6D40D;
+            border-color: #A6D40D;
+          }
+          body[theme="A6D40D"] input[type="email"]:focus,
+          body[theme="A6D40D"] input[type="number"]:focus,
+          body[theme="A6D40D"] input[type="search"]:focus,
+          body[theme="A6D40D"] input[type="text"]:focus,
+          body[theme="A6D40D"] input[type="tel"]:focus,
+          body[theme="A6D40D"] input[type="url"]:focus,
+          body[theme="A6D40D"] input[type="password"]:focus,
+          body[theme="A6D40D"] textarea:focus,
+          body[theme="A6D40D"] select:focus {
+            border: 1px solid #A6D40D;
+          }
+          body[theme="A6D40D"] .page-title {
+            color: #A6D40D;
+          }
+
+          body[theme="A6D40D"] .hexo-douban-tabs .hexo-douban-tab {
+            transition: none;
+          }
+          body[theme="A6D40D"] .hexo-douban-tabs .hexo-douban-tab:hover {
+            background-position: inherit;
+            color: inherit;
+          }
+          body[theme="A6D40D"] .hexo-douban-tabs .hexo-douban-active {
+            background-image: none;
+            background: #A6D40D;
+          }
+
+          .hexo-douban-tabs .hexo-douban-active {
+            background: #A6D40D;
+          }
+    
+      
+          body[theme="E6ADCF"] a:not(.icon) {
+            text-decoration-color: #E6ADCF;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 50%,
+              #E6ADCF 50%
+            );
+          }
+          body[theme="E6ADCF"] blockquote {
+            border-left: 8px solid #E6ADCF;
+          }
+          body[theme="E6ADCF"] .nanobar .bar {
+            background: #E6ADCF;
+          }
+          body[theme="E6ADCF"] .button.button-primary:hover,
+          body[theme="E6ADCF"] button.button-primary:hover,
+          body[theme="E6ADCF"] input[type="submit"].button-primary:hover,
+          body[theme="E6ADCF"] input[type="reset"].button-primary:hover,
+          body[theme="E6ADCF"] input[type="button"].button-primary:hover,
+          body[theme="E6ADCF"] .button.button-primary:focus,
+          body[theme="E6ADCF"] button.button-primary:focus,
+          body[theme="E6ADCF"] input[type="submit"].button-primary:focus,
+          body[theme="E6ADCF"] input[type="reset"].button-primary:focus,
+          body[theme="E6ADCF"] input[type="button"].button-primary:focus {
+            background-color: #E6ADCF;
+            border-color: #E6ADCF;
+          }
+          body[theme="E6ADCF"] input[type="email"]:focus,
+          body[theme="E6ADCF"] input[type="number"]:focus,
+          body[theme="E6ADCF"] input[type="search"]:focus,
+          body[theme="E6ADCF"] input[type="text"]:focus,
+          body[theme="E6ADCF"] input[type="tel"]:focus,
+          body[theme="E6ADCF"] input[type="url"]:focus,
+          body[theme="E6ADCF"] input[type="password"]:focus,
+          body[theme="E6ADCF"] textarea:focus,
+          body[theme="E6ADCF"] select:focus {
+            border: 1px solid #E6ADCF;
+          }
+          body[theme="E6ADCF"] .page-title {
+            color: #E6ADCF;
+          }
+
+          body[theme="E6ADCF"] .hexo-douban-tabs .hexo-douban-tab {
+            transition: none;
+          }
+          body[theme="E6ADCF"] .hexo-douban-tabs .hexo-douban-tab:hover {
+            background-position: inherit;
+            color: inherit;
+          }
+          body[theme="E6ADCF"] .hexo-douban-tabs .hexo-douban-active {
+            background-image: none;
+            background: #E6ADCF;
+          }
+
+          .hexo-douban-tabs .hexo-douban-active {
+            background: #E6ADCF;
+          }
+    
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+  
+  <script src="/lib/pic.min.js" defer></script>
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px;">
+    <h1 class="mt-2 mode">
+      <!-- <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div> -->
+      <div onclick=setDarkMode(true) id="darkBtn">
+        <svg t="1677831078600" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19870" width="24" height="24"><path d="M786.35 462.81m-148.09 0a148.09 148.09 0 1 0 296.18 0 148.09 148.09 0 1 0-296.18 0Z" fill="#FFEA00" p-id="19871"></path><path d="M97.49 593.45c17.14-32.75 34.23-37.55 66.78-18.73 117 67.61 262.68 45 354.08-55C608.55 421 618.17 271 541 161.67c-9.61-13.62-20.12-27.91-10.6-44.12 6-10.3 18.18-17 27.58-25.35h15.67c2.81 1.09 5.52 2.65 8.43 3.2C797.2 136 943.31 328.55 925 547.29c-15.08 179.8-145.36 331-321.39 372.17-23.23 5.43-47.06 8.29-70.61 12.34h-53.31c-4-1-7.89-2.35-11.93-2.84C302.58 908.91 186.88 822 119.44 670.48c-8.81-19.79-14.7-40.88-22-61.36z m108 81.1c44.41 95.94 177.74 202.61 350.39 178.66 160.52-22.27 285.84-157.6 295.83-323.09 10.69-177.1-109.2-300.59-208-336.7 46.14 138.24 28.54 266.05-70.08 375.14-99.22 109.78-225.17 139.82-368.12 105.99z" p-id="19872" data-spm-anchor-id="a313x.7781069.0.i20" class="selected" fill="#13227a"></path></svg>
+      </div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>
+        <svg t="1677831000417" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17751" width="24" height="24"><path d="M728.064 573.44a164.864 164.864 0 1 0-164.864 164.864 164.864 164.864 0 0 0 164.864-164.864z" fill="#F4CA1C" p-id="17752"></path><path d="M512.5632 771.584a258.43712 258.43712 0 1 1 258.43712-258.43712A258.72896 258.72896 0 0 1 512.5632 771.584z m0-448.86016a190.42816 190.42816 0 1 0 190.4128 190.40256 190.63808 190.63808 0 0 0-190.4128-190.42304z m1.13664-128.67584a34.00192 34.00192 0 0 1-34.00192-34.00704V95.44704a34.00704 34.00704 0 0 1 68.00896 0V160.0512a34.00704 34.00704 0 0 1-34.00704 33.9968z m0 768.512a34.00192 34.00192 0 0 1-34.00192-34.00192V863.9488a34.00704 34.00704 0 1 1 68.00896 0v64.60928a34.00192 34.00192 0 0 1-34.00704 34.00192z m414.85824-416.55296H863.9488a34.00704 34.00704 0 1 1 0-68.00896h64.60928a34.00704 34.00704 0 0 1 0 68.00896z m-768.512 0H95.44704a34.00704 34.00704 0 0 1 0-68.00896H160.0512a34.00704 34.00704 0 0 1 0 68.00896z m600.81664-248.86784a34.00192 34.00192 0 0 1-24.064-58.04544l45.69088-45.68576a34.00192 34.00192 0 0 1 48.08192 48.08704L784.896 287.1808a33.88416 33.88416 0 0 1-24.03328 9.9584zM217.45152 840.5504a34.00704 34.00704 0 0 1-24.064-58.05568l45.68576-45.68064a34.00704 34.00704 0 1 1 48.10752 48.08192l-45.68576 45.68064a33.91488 33.91488 0 0 1-24.04352 9.97376z m589.10208 0a33.90976 33.90976 0 0 1-24.0384-9.9584l-45.696-45.696a34.00704 34.00704 0 1 1 48.08704-48.09728l45.68576 45.68064a34.00704 34.00704 0 0 1-24.04352 58.07104zM263.13728 297.1392a33.88416 33.88416 0 0 1-24.064-9.96352l-45.68576-45.68576a34.00192 34.00192 0 1 1 48.08704-48.08192L287.1808 239.104a34.00192 34.00192 0 0 1-24.04352 58.0352z" fill="#f4ea2a" p-id="17753" data-spm-anchor-id="a313x.7781069.0.i16" class="selected"></path></svg>
+      </div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        if (localStorage.getItem('preferredThemeColor')) {
+          document.body.setAttribute("theme", localStorage.getItem('preferredThemeColor'));
+        }
+
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="ten columns ml-1" style="margin-left: 0;">
+    <h1 class="mt-2 page-title">
+      Welcome
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/movies" class="ml">Movies</a>
+          
+        
+          
+          <a href="/travel" class="ml">Travel</a>
+          
+        
+        <!--
+        
+          
+            <a href="mailto:ueezhang@163.com" target="_blank" class="ml">Email</a>
+          
+        
+        -->
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+          
+<h2>All Posts</h2>
+
+
+    <article>
+      <div class="row">
+
+        <div class="three columns left lit">
+          <p class="bottom">Feb 6, 2023</p>
+        </div>
+        <div class="nine columns left mb-3">
+          <a href="/2023/02/06/hello-world/" class="">
+            
+              Hello World
+            
+          </a>
+        </div>
+      </div>
+    </article>
+
+<div class="pagination-bar">
+  <ul class="pagination">
+    
+    
+  </ul>
+</div>
+
+
+        </div>
+        
+        
+        <div class="row mt-2">
+  
+    <div class="eight columns">
+
+      <p id="madewith">
+        <!--
+        Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
+        
+        at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.
+        
+        -->
+        Powered by
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
+        and based on <a href="https://github.com/adisaktijrs/hexo-theme-minima" target="_blank" rel="noreferrer">Minima</a>.
+      </p>
+
+    </div>
+
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
+      <a class="ml-0 footer-link icon" href="https://github.com/yoyoiii" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
+        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="ml-0 footer-link icon" href="https://blog.csdn.net/sinat_35026778" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="CSDN">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" t="1677725968478" class="csdn svg-hov" viewBox="0 0 1024 1024" version="1.1" p-id="14878" width="18" height="18"><path d="M0 0h1024v1024H0z" fill="#FF6633" p-id="14879"/><path d="M698.9824 42.3936c-158.8736-32.5632-289.536 31.2832-324.9152 48.5888-94.72 46.2848-147.712 108.288-174.4896 140.288-25.9584 31.0272-82.7392 105.9328-108.288 215.8592-21.6576 93.1328-10.752 167.7824-6.0416 194.2528 11.4688 64.3072 33.28 186.88 150.4256 275.2 132.5056 99.8912 293.4784 85.5552 342.9888 80.9472 107.264-10.0352 289.4848-57.2928 300.8512-145.7152 5.1712-39.936-24.4224-89.4464-66.2016-102.5024-65.6384-20.5312-108.3392 63.5392-228.6592 80.9472-8.5504 1.2288-126.5664 16.6912-216.6272-48.5888-105.8816-76.6976-98.9696-211.3024-96.256-264.3968 1.536-30.5664 5.5808-93.5424 48.128-161.8944 14.7968-23.7568 60.3136-94.5664 156.4672-134.912 25.2928-10.5984 76.8512-31.5904 144.4352-26.9824 70.0416 4.7616 120.9856 34.5088 144.4352 48.5888 75.8272 45.4144 86.528 90.0608 120.3712 86.3232 35.8912-3.9424 69.9904-59.2896 66.2016-107.9296-7.424-93.7984-155.5968-158.1056-252.8256-178.0736z" fill="#FFFFFF" p-id="14880"/></svg>
+        </a>
+      
+
+      
+        
+          <a class="ml-0 footer-link icon" href="mailto:ueezhang@163.com" style="text-decoration: none" rel="noreferrer" aria-label="Email">
+        
+          <svg t="1677726333379" class="email svg-hov" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="28610" width="18" height="18"><path d="M921.600051 1024H102.400461a102.399949 102.399949 0 0 1-102.399949-102.399949V102.400461a102.041549 102.041549 0 0 1 102.399949-102.399949h819.19959a102.399949 102.399949 0 0 1 102.399949 102.399949v819.19959a102.707149 102.707149 0 0 1-102.399949 102.399949zM870.400077 313.856355A62.361569 62.361569 0 0 0 807.424108 256.000384H220.672402A63.539168 63.539168 0 0 0 153.600435 313.856355v25.599987l340.47983 170.495915a30.361585 30.361585 0 0 0 26.623987 0L870.400077 335.872344v-22.015989z m0 87.551956l-345.087828 174.079913a41.523179 41.523179 0 0 1-35.839982 0L153.600435 404.99231v301.055849A69.171165 69.171165 0 0 0 220.672402 768.000128h582.655708A63.539168 63.539168 0 0 0 870.400077 710.144157V401.408311z" fill="#1296db" p-id="28611"></path></svg>
+        </a>
+      
+
+    </div>
+  
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="/lib/nanobar.min.js"></script>
+
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
