@@ -9,17 +9,21 @@ head
 	meta(name="theme-color" content="#222325")
 	meta(name="apple-mobile-web-app-status-bar-style" content="#222325")
 	meta(name="msapplication-navbutton-color" content="#222325")
-
-	link(rel="stylesheet" href="./css/font.min.css" )
-	link(rel="stylesheet" href='./css/style.css' )
-
 	meta(http-equiv="x-dns-prefetch-control" content="on")
-	//- link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
-	//- link(rel="prefetch" href="https://cdn.jsdelivr.net/")
-
 	meta(name="description" content=`${config.description}`)
-	link(rel="icon" href=`${config.favicon}` type="image/x-icon")
-	link(rel="shortcut icon" href=`${config.favicon}` type="image/x-icon")
+
+	link(rel="icon" href="/images/favicon.png" type="image/x-icon")
+	link(rel="shortcut icon" href="/images/favicon.png" type="image/x-icon")
+	link(rel="stylesheet" href="/font/font.min.css")
+
+	if is_home()
+		link(rel="stylesheet" href='/css/index.css')
+		//- link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
+		//- link(rel="prefetch" href="https://cdn.jsdelivr.net/")
+
+	if is_page()
+		link(rel="stylesheet" href='/css/page.css')
+
 
 	<!--[if lt IE 9]>
 		style.

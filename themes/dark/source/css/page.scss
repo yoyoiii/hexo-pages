@@ -1,0 +1,82 @@
+@import 'common/mixin';
+@import 'common/variable';
+@import 'common/common';
+@import 'common/icon';
+
+@import url(../lib/phantom/css/main.css);
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei",
+    -apple-system, sans-serif;
+    background: radial-gradient(#313131, #0a0a0a);
+}
+
+#wrapper {
+    height: 100vh;
+}
+
+h1 {
+    color: rgba(255,255,255,0.86);
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+#header {
+    .logo {
+        margin-bottom: 2em;
+        > * {
+            color: rgba(255,255,255,0.66);
+        }
+    }
+    nav ul li a {
+        background: none;
+    }
+}
+
+#menu {
+    > .inner {
+        > ul > li {
+            font-size: 1.1em;
+            > a {
+                i.icon {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+// travel page
+#Bmap {
+    height: 60vh;
+    @include border-radius(0.5em);
+    .anchorBL {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 736px) {
+
+    h1 {
+        font-size: 1.75em;
+        margin: 0 0 1em 0;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    h1 {
+        font-size: 1.25em;
+    }
+
+}

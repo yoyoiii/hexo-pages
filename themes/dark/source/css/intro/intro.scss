@@ -31,6 +31,8 @@
 	@media screen and (max-width: 50em) {
 		font-size: 2rem;
 	}
+	text-transform: initial;
+    letter-spacing: 0;
 }
 
 @keyframes whiteShadow {
@@ -52,6 +54,8 @@
 	font-weight: 200;
 	margin-bottom: 2em;
 	text-shadow: 0 0 4px #ffffff;
+	text-transform: initial;
+    letter-spacing: 0;
 
 	@media screen and (max-width: 1024px) {
 		font-size: 1rem;

@@ -1,0 +1,74 @@
+/* 通用元素 */
+@mixin abc {
+    background-color: sandybrown;
+
+}
+@mixin flex(
+    $default-x: flex-start,
+    $default-y: center,
+    $default-direction: row
+    ) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: $default-x;
+            justify-content: $default-x;
+    -ms-flex-align: $default-y;
+    -webkit-align-items: $default-y;
+            align-items: $default-y;
+    -ms-flex-direction: $default-direction;
+    -webkit-flex-direction: $default-direction;
+    flex-direction: $default-direction;
+}
+// border-radius 兼容
+@mixin border-radius($def-value: 0) {
+    border-radius: $def-value;
+    -webkit-border-radius: $def-value;
+    -moz-border-radius: $def-value;
+    -ms-border-radius: $def-value;
+    -o-border-radius: $def-value;
+}
+
+// 渐变兼容
+@mixin gradient ($def-deg, $def-color1, $def-color2) {
+    background-image: -webkit-linear-gradient($def-deg, $def-color1, $def-color2);
+    background-image: -moz-linear-gradient($def-deg, $def-color1, $def-color2);
+    background-image: -o-linear-gradient($def-deg, $def-color1, $def-color2);
+    background-image: -ms-linear-gradient($def-deg, $def-color1, $def-color2);
+    background-image: linear-gradient($def-deg, $def-color1, $def-color2);
+}
+
+@mixin border-bottom-1px($def-color: #eee){
+    position: relative;
+    &::after {
+        width: 100%;
+        height: 1px;
+        background: $def-color;
+        display: block;
+        content: '';
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@mixin border-top-1px($def-color: #eee){
+    position: relative;
+    &::after {
+        width: 100%;
+        height: 1px;
+        background: $def-color;
+        display: block;
+        content: '';
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

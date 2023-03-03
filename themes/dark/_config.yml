@@ -1,0 +1,40 @@
+# 页面配置
+arthor: Youyi Z
+avatar: images/avatar.jpg
+
+menu: [
+    {
+      "href": "/travel",
+      "icon": "lvhang1",
+      "text": "Travel"
+    },
+    {
+      "href": "/marker",
+      "icon": "wodejianli",
+      "text": "Marker"
+    },
+    {
+      "href": "/about",
+      "icon": "banaixin",
+      "text": "About"
+    },
+]
+links: [
+    {
+      "href": "https://blog.csdn.net/sinat_35026778",
+      "icon": "blog"
+    },
+    {
+      "href": "https://github.com/yoyoiii",
+      "icon": "github"
+    }
+]
+
+intro:
+  title: "Youyi Z"
+  subtitle: "Front back left right end engineer"
+  enter: "enter"
+  background: true
+
+index:
+	signature: "Code & Input & Output"

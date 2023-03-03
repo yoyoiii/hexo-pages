@@ -1,2 +1,45 @@
-.slidebar slidebar
-main page
+#wrapper
+    header#header
+        .inner
+            a.logo(href="/")
+                span.symbol
+                    img(src="/images/favicon.png" alt="")
+                span.title Phantom
+
+            nav
+                ul
+                    li
+                        a(href="#menu")
+    nav#menu
+        h2 Menu
+        ul
+            li
+                a(href="/" aria-label="Home")
+                    //- i(class=`icon icon-${item.icon}`)
+                    span(data-translate="Home") Home
+            each item in theme.menu
+                li
+                    a(href=`${item.href}` aria-label=`${item.text}` target="_blank")
+                        //- i(class=`icon icon-${item.icon}`)
+                        span(data-translate=`${item.text}`) #{item.text}
+
+    .main
+        .inner
+            header
+                <h1>#{page.title}</h1>
+            .main-content(id=`${page.id}`)
+                case page.type
+                    when 'travel'
+                        include pages/_travel.pug
+                    when 'marker'
+                        include pages/_marker.pug
+                    //- default
+                    //-     include page/default-page.pug
+
+
+script(src='../js/page.js')
+case page.type
+    when 'travel'
+        script(src='../js/travel.js')
+    when 'marker'
+        script(src='../js/marker.js')

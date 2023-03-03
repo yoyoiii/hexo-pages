@@ -7,7 +7,7 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: Youyi.Z
+author: ''
 language: en
 timezone: ''
 
@@ -98,14 +98,14 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-# theme: inside
-theme: dark
+# theme: butterfly
+theme: minima
+# theme: dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-
 
 babelify:
   presets:
@@ -118,40 +118,28 @@ node_sass:
   precision: 5
   sourceComments: false
 
-# 页面配置
-intro_page:
-  title: "Youyi Z"
-  subtitle: "Front back left right end engineer"
-  enter: "enter"
-  background: true
-
-main_page:
-  name: "Youyi Z"
-	signature: "Code & Input & Output"
-	avatar: {
-		link: "assets/avatar.jpg",
-		height: "100",
-		width: "100",
-	}
-  ul: {
-    first: {
-      "href": "https://blog.csdn.net/sinat_35026778",
-      "icon": "blog",
-      "text": "Blog"
-    },
-    second: {
-      "href": "/about",
-      "icon": "banaixin",
-      "text": "About"
-    },
-    third: {
-      "href": "/travel",
-      "icon": "lvhang1",
-      "text": "Travel"
-    },
-    fourth: {
-      "href": "/cv-test.pdf",
-      "icon": "wodejianli",
-      "text": "Resume"
-    }
-  }
+douban:
+  id: 74264189
+  builtin: false
+  item_per_page: 5
+  # book:
+  #   path: books/index.html
+  #   title: 'This is my book title'
+  #   quote: 'This is my book quote'
+  #   option:
+  movie:
+    path: movies/index.html
+    title: 'Movies'
+    quote: 'When you know nothing matters, the universe is yours.  —— 《Rick and Morty》'
+    option:
+  # game:
+  #   path: games/index.html
+  #   title: 'This is my game title'
+  #   quote: 'This is my game quote'
+  #   option:
+  # song:
+  #   path: songs/index.html
+  #   title: 'This is my song title'
+  #   quote: 'This is my song quote'
+  #   option:
+  timeout: 10000

@@ -1,0 +1,122 @@
+<!-- 默认主题 -->
+<style>
+  a:not(.icon) {
+    text-decoration-color: #<%= theme.tcolor %>;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #<%= theme.tcolor %> 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #<%= theme.tcolor %>;
+  }
+  .nanobar .bar {
+    background: #<%= theme.tcolor %>;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #<%= theme.tcolor %>;
+    border-color: #<%= theme.tcolor %>;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #<%= theme.tcolor %>;
+  }
+  .page-title {
+    color: #<%= theme.tcolor %>;
+  }
+
+  /* hexo-douban */
+  .hexo-douban-tabs .hexo-douban-tab {
+    transition: none;
+    background-image: none !important;
+  }
+  .hexo-douban-tabs .hexo-douban-tab:hover {
+    background-position: inherit;
+    color: inherit;
+  }
+  .hexo-douban-tabs .hexo-douban-active {
+    background-image: none;
+    background: #<%= theme.tcolor %>;
+  }
+</style>
+
+<!-- 选择主题 -->
+<style>
+   <% for (let i in theme.theme_colors) { %>
+      <% let tcolor = theme.theme_colors[i]; %>
+          body[theme="<%- tcolor %>"] a:not(.icon) {
+            text-decoration-color: #<%= tcolor %>;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0) 50%,
+              #<%= tcolor %> 50%
+            );
+          }
+          body[theme="<%- tcolor %>"] blockquote {
+            border-left: 8px solid #<%= tcolor %>;
+          }
+          body[theme="<%- tcolor %>"] .nanobar .bar {
+            background: #<%= tcolor %>;
+          }
+          body[theme="<%- tcolor %>"] .button.button-primary:hover,
+          body[theme="<%- tcolor %>"] button.button-primary:hover,
+          body[theme="<%- tcolor %>"] input[type="submit"].button-primary:hover,
+          body[theme="<%- tcolor %>"] input[type="reset"].button-primary:hover,
+          body[theme="<%- tcolor %>"] input[type="button"].button-primary:hover,
+          body[theme="<%- tcolor %>"] .button.button-primary:focus,
+          body[theme="<%- tcolor %>"] button.button-primary:focus,
+          body[theme="<%- tcolor %>"] input[type="submit"].button-primary:focus,
+          body[theme="<%- tcolor %>"] input[type="reset"].button-primary:focus,
+          body[theme="<%- tcolor %>"] input[type="button"].button-primary:focus {
+            background-color: #<%= tcolor %>;
+            border-color: #<%= tcolor %>;
+          }
+          body[theme="<%- tcolor %>"] input[type="email"]:focus,
+          body[theme="<%- tcolor %>"] input[type="number"]:focus,
+          body[theme="<%- tcolor %>"] input[type="search"]:focus,
+          body[theme="<%- tcolor %>"] input[type="text"]:focus,
+          body[theme="<%- tcolor %>"] input[type="tel"]:focus,
+          body[theme="<%- tcolor %>"] input[type="url"]:focus,
+          body[theme="<%- tcolor %>"] input[type="password"]:focus,
+          body[theme="<%- tcolor %>"] textarea:focus,
+          body[theme="<%- tcolor %>"] select:focus {
+            border: 1px solid #<%= tcolor %>;
+          }
+          body[theme="<%- tcolor %>"] .page-title {
+            color: #<%= tcolor %>;
+          }
+
+          body[theme="<%- tcolor %>"] .hexo-douban-tabs .hexo-douban-tab {
+            transition: none;
+          }
+          body[theme="<%- tcolor %>"] .hexo-douban-tabs .hexo-douban-tab:hover {
+            background-position: inherit;
+            color: inherit;
+          }
+          body[theme="<%- tcolor %>"] .hexo-douban-tabs .hexo-douban-active {
+            background-image: none;
+            background: #<%= tcolor %>;
+          }
+
+          .hexo-douban-tabs .hexo-douban-active {
+            background: #<%= tcolor %>;
+          }
+    <% } %>
+</style>

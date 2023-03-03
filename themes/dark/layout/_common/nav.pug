@@ -1,0 +1,24 @@
+#wrapper
+    header#header
+        .inner
+            a.logo(href="index.html")
+                span.symbol
+                    img(src="/images/favicon.png" alt="")
+                span.title Phantom
+
+            nav
+                ul
+                    li
+                        a(href="#menu")
+    nav#menu
+        h2 Menu
+        ul
+            li
+                a(href="index.html" aria-label="Home")
+                    i(class=`icon icon-${item.icon}`)
+                    span(data-translate=`${item.text}`) Home
+            //- each item in config.main_page.menu
+            //-     li
+            //-         a(href=`${item.href}` aria-label=`${item.text}`)
+            //-             i(class=`icon icon-${item.icon}`)
+            //-             span(data-translate=`${item.text}`) #{item.text}
