@@ -1,8 +1,24 @@
+.vertical-mid {
+    vertical-align: middle;
+}
+
 .hexo-douban-item .hexo-douban-meta {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+}
+
+/* Page - Layout */
+.page-title > img {
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+    box-shadow: none;
+    margin-right: 0.6rem;
+}
+.page-title > span {
+    vertical-align: middle;
 }
 
 /* Page - Index */
@@ -15,7 +31,6 @@
 .theme-color > span:hover {
     cursor: pointer;
 }
-
 
 /* Page - Travel */
 #Bmap {
