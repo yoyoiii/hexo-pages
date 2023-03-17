@@ -1,3 +1,5 @@
+@import url(./animate.css);
+
 .vertical-mid {
     vertical-align: middle;
 }
@@ -10,12 +12,18 @@
 }
 
 /* Page - Layout */
-.page-title > img {
-    width: 3rem;
-    height: 3rem;
+.page-title {
+    user-select: none;
+}
+.page-title > i.head-icon {
+    display: inline-block;
+    font-size: 0;
     vertical-align: middle;
-    box-shadow: none;
     margin-right: 0.6rem;
+    min-width: 3.2rem;
+}
+.page-title > i:hover {
+    cursor: pointer;
 }
 .page-title > span {
     vertical-align: middle;
@@ -24,12 +32,14 @@
 /* Page - Index */
 .theme-color > span {
     display: inline-block;
+    font-size: 0;
 }
 .theme-color > span:not(:last-of-type) {
     margin-right: 0.5rem;
 }
 .theme-color > span:hover {
     cursor: pointer;
+    animation: heartBeat 1.5s;
 }
 
 /* Page - Travel */
@@ -45,28 +55,32 @@
     display: none;
 }
 
-.travel-keywords {
+.travel-list {
     margin-top: 2em;
 
 }
-.travel-keywords > ul {
+.travel-list > ul {
     margin-left: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
-.travel-keywords > ul > li {
+.travel-list > ul > li {
     display: inline-block;
+    color: #666;
     margin-right: 1em;
     margin-bottom: 1em;
-    height: 1.4em;
-    padding: 0 0.8em 0 1.5em;
+    height: 2.2rem;
+    padding: 0 1rem;
     font-size: 0.9em;
-    line-height: 1.4em;
-    background: rgba(0,0,0,0.5);
-    border-radius: 1rem;
-    -webkit-border-radius: 0.4em;
-    -moz-border-radius: 0.4em;
-    -ms-border-radius: 0.4em;
-    -o-border-radius: 0.4em;
+    line-height: 2.2rem;
+    background: rgba(0,0,0,0.15);
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+.travel-list > ul > li:hover {
+    cursor: pointer;
 }

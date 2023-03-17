@@ -199,6 +199,7 @@
           .hexo-douban-tabs .hexo-douban-active {
             background: #A35C8F;
           }
+
     
       
           body[theme="22A2C3"] a:not(.icon) {
@@ -258,6 +259,7 @@
           .hexo-douban-tabs .hexo-douban-active {
             background: #22A2C3;
           }
+
     
       
           body[theme="E68C12"] a:not(.icon) {
@@ -317,6 +319,7 @@
           .hexo-douban-tabs .hexo-douban-active {
             background: #E68C12;
           }
+
     
       
           body[theme="A6D40D"] a:not(.icon) {
@@ -376,6 +379,7 @@
           .hexo-douban-tabs .hexo-douban-active {
             background: #A6D40D;
           }
+
     
       
           body[theme="E6ADCF"] a:not(.icon) {
@@ -435,6 +439,7 @@
           .hexo-douban-tabs .hexo-douban-active {
             background: #E6ADCF;
           }
+
     
 </style>
 
@@ -466,7 +471,7 @@
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>
         <svg t="1677831000417" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17751" width="24" height="24"><path d="M728.064 573.44a164.864 164.864 0 1 0-164.864 164.864 164.864 164.864 0 0 0 164.864-164.864z" fill="#F4CA1C" p-id="17752"></path><path d="M512.5632 771.584a258.43712 258.43712 0 1 1 258.43712-258.43712A258.72896 258.72896 0 0 1 512.5632 771.584z m0-448.86016a190.42816 190.42816 0 1 0 190.4128 190.40256 190.63808 190.63808 0 0 0-190.4128-190.42304z m1.13664-128.67584a34.00192 34.00192 0 0 1-34.00192-34.00704V95.44704a34.00704 34.00704 0 0 1 68.00896 0V160.0512a34.00704 34.00704 0 0 1-34.00704 33.9968z m0 768.512a34.00192 34.00192 0 0 1-34.00192-34.00192V863.9488a34.00704 34.00704 0 1 1 68.00896 0v64.60928a34.00192 34.00192 0 0 1-34.00704 34.00192z m414.85824-416.55296H863.9488a34.00704 34.00704 0 1 1 0-68.00896h64.60928a34.00704 34.00704 0 0 1 0 68.00896z m-768.512 0H95.44704a34.00704 34.00704 0 0 1 0-68.00896H160.0512a34.00704 34.00704 0 0 1 0 68.00896z m600.81664-248.86784a34.00192 34.00192 0 0 1-24.064-58.04544l45.69088-45.68576a34.00192 34.00192 0 0 1 48.08192 48.08704L784.896 287.1808a33.88416 33.88416 0 0 1-24.03328 9.9584zM217.45152 840.5504a34.00704 34.00704 0 0 1-24.064-58.05568l45.68576-45.68064a34.00704 34.00704 0 1 1 48.10752 48.08192l-45.68576 45.68064a33.91488 33.91488 0 0 1-24.04352 9.97376z m589.10208 0a33.90976 33.90976 0 0 1-24.0384-9.9584l-45.696-45.696a34.00704 34.00704 0 1 1 48.08704-48.09728l45.68576 45.68064a34.00704 34.00704 0 0 1-24.04352 58.07104zM263.13728 297.1392a33.88416 33.88416 0 0 1-24.064-9.96352l-45.68576-45.68576a34.00192 34.00192 0 1 1 48.08704-48.08192L287.1808 239.104a34.00192 34.00192 0 0 1-24.04352 58.0352z" fill="#f4ea2a" p-id="17753" data-spm-anchor-id="a313x.7781069.0.i16" class="selected"></path></svg>
       </div>
-      <script >
+      <script>
         if (localStorage.getItem('preferredTheme') == 'dark') {
           setDarkMode(true)
         }
@@ -494,7 +499,7 @@
 
   <div class="ten columns ml-1" style="margin-left: 0;">
     <h1 class="mt-2 page-title">
-      <img src="/images/favicon.png" alt="">
+      <i class="head-icon" id="headIconBtn"></i>
       <span>Hi</span>
     </h1>
   </div>
@@ -526,17 +531,23 @@
 </div>
 
         <div class="trans">
-            <h2>Where have I been</h2>
+          <h2>Where have I been</h2>
 
-  
+  <blockquote>
+    <p>你来人间一趟，你要看看太阳，和你的心上人，一起走在街上。—— 海子《夏天的太阳》</p>
+  </blockquote>
+
+
+
+
 
         </div>
         
           <div class="twelve">
     <div class="travel-tage"></div>
     <div id="Bmap"></div>
-    <div class="travel-keywords">
-        <ul id="KeywordsList">
+    <div class="travel-list">
+        <ul id="travelTags">
         </ul>
     </div>
     <script src="/js/travel.js" defer></script>
@@ -617,6 +628,8 @@
     nanobar.go(76);
     nanobar.go(100);
   </script>
+
+  <script src="/js/layout.js"></script>
 
 </body>
 
