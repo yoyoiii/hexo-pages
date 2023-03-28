@@ -12,6 +12,8 @@ desc: "Romantic, Freely and Balanced."
 menu:
   Movies: /movies
   Travel: /travel
+  Album: /album
+  # Music: /music
   # About: /about
 
 #index/main page max show posts (in number)
@@ -70,5 +72,4 @@ theme_colors: [
   "E6ADCF",
 ]
 
-# Travel
-travel: true
+

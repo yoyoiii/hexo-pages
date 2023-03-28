@@ -138,6 +138,12 @@
         <% if (page.type == "travel") { %>
           <%- partial('partial/travel') %>
         <% } %>
+        <% if (page.type == "album") { %>
+          <%- partial('partial/album') %>
+        <% } %>
+        <% if (page.type == "music") { %>
+          <%- partial('partial/music') %>
+        <% } %>
         <% if (theme.search) { %>
           <%- partial('partial/search') %>
         <% } %>
@@ -159,6 +165,8 @@
     nanobar.go(76);
     nanobar.go(100);
   </script>
+
+  <script src="/js/layout.js"></script>
 
 </body>
 

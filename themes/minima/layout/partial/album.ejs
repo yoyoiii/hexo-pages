@@ -1,0 +1,20 @@
+<div class="album-con">
+    <ul class="album-list">
+        <% for (let i in page.data) { %>
+            <% let item = page.data[i]; %>
+            <li>
+                <div class="img-box">
+                    <a href="/album-<%- item.name %>">
+                        <img src="/album<%- url_for(item.url) %>" alt="photo">
+                    </a>
+                </div>
+                <div class="img-detail">
+                    <p class="decs"><%= item.desc %></p>
+                    <hr>
+                    <p class="date"><%- full_date(item.date, 'll') %></p>
+                </div>
+            </li>
+        <% } %>
+    </ul>
+</div>
+<script src="/js/album.js" defer></script>

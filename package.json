@@ -15,6 +15,7 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "animejs": "^3.2.1",
+    "aplayer": "^1.10.1",
     "hexo": "^6.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-douban": "^2.1.6",
@@ -34,6 +35,7 @@
     "node-sass": "^4.12.0"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-tag-color-block": "0.0.3",
     "typed.js": "^2.0.12"

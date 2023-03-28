@@ -1,3 +1,9 @@
-  <h2><%- page.title %></h2>
+<h2><%- page.title %></h2>
+<% if(page.quote) { %>
+  <blockquote>
+    <p><%- page.quote %></p>
+  </blockquote>
+<% } %>
 
-  <%- page.content%>
+<%- page.content%>
+

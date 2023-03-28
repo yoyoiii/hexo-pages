@@ -6,7 +6,7 @@ let page = {
     init: async () => {
         const config = await page.loadConf();
         page.mountMap(config.MY_ADDRESS);
-        // page.mountKeywords(config.MY_KEYWORDS);
+        page.mountKeywords(config.MY_KEYWORDS);
         // page.setSwiperPhotos();
         // page.loadEvent();
     },
@@ -146,7 +146,7 @@ let page = {
 
     mountKeywords: (keywords = []) => {
         for (let i = 0; i < keywords.length; i++) {
-            $("#KeywordsList").append(`<li>${keywords[i]}</li>`)
+            $("#travelTags").append(`<li>${keywords[i]}</li>`)
         }
     }
 }

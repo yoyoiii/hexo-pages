@@ -14,7 +14,7 @@ let page = {
         });
     },
     event: () => {
-        $(".theme-color").on("click", ".icon-color", function () {
+        $(".my-theme-color").on("click", ".icon-color", function () {
             const $tcolor = $(this).data("tcolor");
             localStorage.setItem('preferredThemeColor', $tcolor);
             $('body').attr("theme", $tcolor );

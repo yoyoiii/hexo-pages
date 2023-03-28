@@ -284,6 +284,9 @@ body.darkmode {
   background: rgb(34, 34, 38);
   color: rgba(255, 255, 255, 0.86);
 }
+body.darkmode hr{
+  border-color: rgba(255, 255, 255, 0.26);
+}
 
 .trans {
   animation: transitionPlay 0.7s;

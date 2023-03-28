@@ -132,7 +132,7 @@ douban:
   #   option:
   movie:
     path: movies/index.html
-    title: 'Movies'
+    title: 'MOVIES RECORD'
     quote: 'When you know nothing matters, the universe is yours.  —— 《Rick and Morty》'
     option:
   # game:
