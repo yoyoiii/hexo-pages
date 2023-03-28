@@ -22,9 +22,6 @@
     margin-right: 0.6rem;
     min-width: 3.2rem;
 }
-.page-title > i:hover {
-    cursor: pointer;
-}
 .page-title > span {
     vertical-align: middle;
 }
@@ -45,11 +42,8 @@
 /* Page - Travel */
 #Bmap {
     height: 50vh;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
 }
 #Bmap .anchorBL {
     display: none;
@@ -83,4 +77,86 @@
 }
 .travel-list > ul > li:hover {
     cursor: pointer;
+}
+body.darkmode .travel-list > ul > li {
+    color: rgba(255,255,255,0.66);
+    background: rgba(0,0,0,0.85);
+}
+
+/* Page - Album */
+.album-con {
+
+}
+.album-con .album-list {
+    font-family: 'DM Serif Display', serif;
+    margin-top: -2rem;
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+.album-con .album-list > li {
+    width: 100%;
+    /* border-radius: 0.4rem; */
+    overflow: hidden;
+    margin-top: 3.5rem;
+}
+.album-con .album-list > li .img-box {
+    position: relative;
+}
+.album-con .album-list > li .img-box::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.album-con .album-list > li .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-shadow: none;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.album-con .album-list > li .img-box img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.album-con .album-list > li .img-detail {
+    margin-top: 1.6rem;
+}
+.album-con .album-list > li .img-detail p {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #333;
+}
+.album-con .album-list > li .img-detail p.date {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    color: #888;
+    letter-spacing: 0.1em;
+}
+.album-con .album-list > li .img-detail hr {
+    border-color: #999;
+    width: 10%;
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+}
+body.darkmode .album-con .album-list > li .img-detail p {
+    color: rgba(255,255,255,0.86);
+}
+body.darkmode .album-con .album-list > li .img-detail p.date {
+    color: rgba(255,255,255,0.66);
+}
+
+@media (min-width: 550px) {
+    .album-con .album-list > li {
+        width: 46%;
+    }
 }
