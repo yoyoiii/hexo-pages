@@ -46,7 +46,7 @@ switch_light: ☀️
 switch_dark: 🌑
 
 # Picture enlargement
-picjs: /lib/pic.min.js
+# picjs: /lib/pic.min.js
 
 # favicon
 favicon: /images/favicon.png

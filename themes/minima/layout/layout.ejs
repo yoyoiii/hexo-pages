@@ -10,119 +10,129 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
 
-  <%
-  if (!config.author) {
-    config.author = ""
-  }
+  <% if (!config.author) { config.author="" } var title=title=config.title; if (is_archive()){ title='All Posts - ' +
+    config.author; } else if (is_post()){ title=page.title; } else if (is_page()){ title=page.title + ' - ' +
+    config.author; } else if (is_tag()){ title='Posts Related to ' + page.tag; } %>
+    <title>
+      <%= title %>
+    </title>
+    <% if (config.sitemap) { %>
+      <link rel="sitemap" href="<%-config.url + config.sitemap.path %>" />
+      <% } %>
+        <link rel="canonical" href="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>">
+        <% if (is_page()){ %>
+          <meta name="description" content="<%= page.description %>">
+          <% } else if (page.content){ %>
+            <meta name="description"
+              content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+            <% } else { %>
+              <meta name="description" content="<%= config.description %>">
+              <% } %>
+                <% if (config.keywords) { %>
+                  <meta name="keywords" content="<%= config.keywords %>">
+                  <% } %>
+                    <meta name="author" content="<%- config.author %>">
+                    <% if (is_post() || is_page()) { %>
+                      <% if(page.thumbnail){ %>
+                        <meta property="og:image" content="<%-config.url + page.thumbnail %>">
+                        <% } %>
+                          <% } else { %>
+                            <% if(theme.thumbnail){ %>
+                              <meta property="og:image" content="<%-config.url + theme.thumbnail %>">
+                              <% } %>
+                                <% } %>
+                                  <meta property="og:site_name" content="<%= config.title %>" />
+                                  <meta property="og:type" content="article" />
+                                  <meta property="og:title" content="<%= title %>" />
+                                  <% if (is_page()){ %>
+                                    <meta property="og:description" content="<%= page.description %>">
+                                    <% } else if (page.content){ %>
+                                      <meta property="og:description"
+                                        content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+                                      <% } else { %>
+                                        <meta property="og:description" content="<%= config.description %>">
+                                        <% } %>
+                                          <meta property="og:url"
+                                            content="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>" />
 
-  var title = title = config.title;
-  if (is_archive()){
-    title = 'All Posts - ' + config.author;
-  } else if (is_post()){
-    title = page.title;
-  } else if (is_page()){
-    title = page.title + ' - ' + config.author;
-  } else if (is_tag()){
-    title = 'Posts Related to ' + page.tag;
-  }
-  %>
-  <title><%= title %></title>
-  <% if (config.sitemap) { %>
-  <link rel="sitemap" href="<%-config.url + config.sitemap.path %>" />
-  <% } %>
-  <link rel="canonical" href="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>">
-  <% if (is_page()){ %>
-  <meta name="description" content="<%= page.description %>">
-  <% } else if (page.content){ %>
-  <meta name="description" content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
-  <% } else { %>
-  <meta name="description" content="<%= config.description %>">
-  <% } %>
-  <% if (config.keywords) { %>
-  <meta name="keywords" content="<%= config.keywords %>">
-  <% } %>
-  <meta name="author" content="<%- config.author %>">
-  <% if (is_post() || is_page()) { %>
-  <% if(page.thumbnail){ %>
-  <meta property="og:image" content="<%-config.url + page.thumbnail %>">
-  <% } %>
-  <% } else { %>
-  <% if(theme.thumbnail){ %>
-  <meta property="og:image" content="<%-config.url + theme.thumbnail %>">
-  <% } %>
-  <% } %>
-  <meta property="og:site_name" content="<%= config.title %>" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="<%= title %>" />
-  <% if (is_page()){ %>
-  <meta property="og:description" content="<%= page.description %>">
-  <% } else if (page.content){ %>
-  <meta property="og:description" content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
-  <% } else { %>
-  <meta property="og:description" content="<%= config.description %>">
-  <% } %>
-  <meta property="og:url" content="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>" />
+                                          <meta name="twitter:card" content="summary_large_image">
+                                          <meta name="twitter:title" content="<%= title %>">
+                                          <% if (is_page()){ %>
+                                            <meta name="twitter:description" content="<%= page.description %>">
+                                            <% } else if (page.content){ %>
+                                              <meta name="twitter:description"
+                                                content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+                                              <% } else { %>
+                                                <meta name="twitter:description" content="<%= config.description %>">
+                                                <% } %>
+                                                  <% if (is_post() || is_page()) { %>
+                                                    <% if(page.thumbnail){ %>
+                                                      <meta name="twitter:image"
+                                                        content="<%-config.url + page.thumbnail %>">
+                                                      <% } %>
+                                                        <% } else { %>
+                                                          <% if(theme.thumbnail){ %>
+                                                            <meta name="twitter:image"
+                                                              content="<%-config.url + theme.thumbnail %>">
+                                                            <% } %>
+                                                              <% } %>
+                                                                <meta name="twitter:url"
+                                                                  content="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<%= title %>">
-  <% if (is_page()){ %>
-  <meta name="twitter:description" content="<%= page.description %>">
-  <% } else if (page.content){ %>
-  <meta name="twitter:description" content="<%= strip_html(page.content).replace(/\n/g, " ").replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
-  <% } else { %>
-  <meta name="twitter:description" content="<%= config.description %>">
-  <% } %>
-  <% if (is_post() || is_page()) { %>
-  <% if(page.thumbnail){ %>
-  <meta name="twitter:image" content="<%-config.url + page.thumbnail %>">
-  <% } %>
-  <% } else { %>
-  <% if(theme.thumbnail){ %>
-  <meta name="twitter:image" content="<%-config.url + theme.thumbnail %>">
-  <% } %>
-  <% } %>
-  <meta name="twitter:url" content="<%= url.replace(/index\.html$/, '').replace(/index\.html$/, '') %>" />
-
-  <!-- Mobile Specific Metas
+                                                                <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+                                                                <meta name="viewport"
+                                                                  content="width=device-width, initial-scale=1">
 
-  <!-- Preload fonts
+                                                                <!-- Preload fonts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+                                                                <link rel="preload"
+                                                                  href="/fonts/dm-serif-display-v4-latin-regular.woff2"
+                                                                  as="font" type="font/woff2" crossorigin>
+                                                                <link rel="preload"
+                                                                  href="/fonts/inter-v2-latin-regular.woff2" as="font"
+                                                                  type="font/woff2" crossorigin>
 
-  <!-- CSS
+                                                                <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <%- css('css/normalize.css') %>
-  <%- css('css/skeleton.css') %>
-  <%- css('css/custom.css') %>
-  <%- css('css/prism-dark.css') %>
-  <%- css('css/prism-line-numbers.css') %>
-  <!-- User css -->
-  <% if (theme.usercss) { %>
-  <%- css(theme.usercss) %>
-  <% } %>
+                                                                <%- css('css/normalize.css') %>
+                                                                  <%- css('css/skeleton.css') %>
+                                                                    <%- css('css/custom.css') %>
+                                                                      <%- css('css/prism-dark.css') %>
+                                                                        <%- css('css/prism-line-numbers.css') %>
+                                                                          <!-- User css -->
+                                                                          <% if (theme.usercss) { %>
+                                                                            <%- css(theme.usercss) %>
+                                                                              <% } %>
 
-  <!-- Favicon
+                                                                                <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="<%- theme.favicon %>">
+                                                                                <link rel="icon" type="image/png"
+                                                                                  href="<%- theme.favicon %>">
 
-  <!-- Custom Theme Color Style
+                                                                                <!-- Custom Theme Color Style
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <%- partial('partial/tcolor') %>
+                                                                                <%- partial('partial/tcolor') %>
 
-  <!-- Google Analytics (With Privacy Settings On)
+                                                                                  <!-- Google Analytics (With Privacy Settings On)
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <%- partial('partial/google_analytics') %>
+                                                                                  <%-
+                                                                                    partial('partial/google_analytics')
+                                                                                    %>
 
-  <% if (theme.picjs) { %>
-  <script src="<%- theme.picjs %>" defer></script>
-  <% } %>
+                                                                                    <% if (theme.picjs) { %>
+                                                                                      <script src="<%- theme.picjs %>"
+                                                                                        defer></script>
+                                                                                      <% } %>
 
-  <% if (theme.search) { %>
-  <script src="/lib/search.min.js" defer></script>
-  <% } %>
+                                                                                        <% if (theme.search) { %>
+                                                                                          <script
+                                                                                            src="/lib/search.min.js"
+                                                                                            defer></script>
+                                                                                          <% } %>
+                                                                                            <script
+                                                                                              src="/lib/jquery-3.6.4.min.js"
+                                                                                              defer></script>
 
 </head>
 
@@ -132,22 +142,22 @@
       <div>
 
         <%- partial('partial/header') %>
-        <div class="trans">
-          <%- body %>
-        </div>
-        <% if (page.type == "travel") { %>
-          <%- partial('partial/travel') %>
-        <% } %>
-        <% if (page.type == "album") { %>
-          <%- partial('partial/album') %>
-        <% } %>
-        <% if (page.type == "music") { %>
-          <%- partial('partial/music') %>
-        <% } %>
-        <% if (theme.search) { %>
-          <%- partial('partial/search') %>
-        <% } %>
-        <%- partial('partial/footer') %>
+          <div class="trans">
+            <%- body %>
+          </div>
+          <% if (page.type=="travel" ) { %>
+            <%- partial('partial/travel') %>
+              <% } %>
+                <% if (page.type=="album" ) { %>
+                  <%- partial('partial/album') %>
+                    <% } %>
+                      <% if (page.type=="music" ) { %>
+                        <%- partial('partial/music') %>
+                          <% } %>
+                            <% if (theme.search) { %>
+                              <%- partial('partial/search') %>
+                                <% } %>
+                                  <%- partial('partial/footer') %>
       </div>
 
     </div>
@@ -165,8 +175,7 @@
     nanobar.go(76);
     nanobar.go(100);
   </script>
-
-  <script src="/js/layout.js"></script>
+  <!-- <script src="/js/layout.js"></script> -->
 
 </body>
 

@@ -1,14 +1,14 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 // import 'APlayer/dist/APlayer.min.css';
-import APlayer from 'APlayer';
+// import APlayer from 'APlayer';
 // import '../lib/Meting.min'
 
 
 
 let page = {
     init: () => {
-        page.loadAPlayer();
-        page.event();
+        // page.loadAPlayer();
+        // page.event();
     },
     loadAPlayer: () => {
         const options = {
